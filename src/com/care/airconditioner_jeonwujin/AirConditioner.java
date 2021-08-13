@@ -8,26 +8,32 @@ public class AirConditioner {
 	public void tempUp() {
 		if(temp >= 18 && temp < 30)
 			temp = temp + 1;
+		tempPrint();
 	}
 	public void tempDown() {
 		if(temp > 18 && temp <= 30)
 			temp = temp - 1;
+		tempPrint();
 	}
 	public void humUp() {
 		if(hum >= 30 && hum < 70)
 			hum = hum + 5;
+		humPrint();
 	}
 	public void humDown() {
 		if(hum > 30 && hum <= 70)
 			hum = hum - 5;
+		humPrint();
 	}
 	public void windUp() {
 		if(wind >= 1 && wind < 5)
 			this.wind = wind + 1;
+		windPrint();
 	}
 	public void windDown() {
 		if(wind > 1 && wind <= 5)
 			wind = wind - 1;
+		windPrint();
 	}
 	public void tempPrint() {
 		System.out.println("현재 목표 온도 : " + getTemp() + "℃");
@@ -103,11 +109,9 @@ public class AirConditioner {
 							switch(inputTempNum) {
 							case 1 :
 								tempUp();
-								tempPrint();
 								break;
 							case 2 :
 								tempDown();
-								tempPrint();
 								break;
 							case 3 :
 								System.out.println("온도 조작 종료\n");
@@ -128,11 +132,9 @@ public class AirConditioner {
 							switch(inputHumNum) {
 							case 1 :
 								humUp();
-								humPrint();
 								break;
 							case 2 :
 								humDown();
-								humPrint();
 								break;
 							case 3 :
 								System.out.println("습도 조작 종료\n");
@@ -153,11 +155,9 @@ public class AirConditioner {
 							switch(inputWindNum) {
 							case 1 :
 								windUp();
-								windPrint();
 								break;
 							case 2 :
 								windDown();
-								windPrint();
 								break;
 							case 3 :
 								System.out.println("송풍 조작 종료\n");
