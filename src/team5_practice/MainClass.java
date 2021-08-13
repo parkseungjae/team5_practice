@@ -4,11 +4,10 @@ import java.util.Scanner;
 public class MainClass {
 
 	public static void main(String[] args) {
-		// 에어컨 객체 생성 위치
-		// 전화기 객체 생성 위치
-		// 라디오 객체 생성 위치
-		// 욕조 객체 생성 위치
-
+		// 각자 객체 생성 위치 1
+		// 각자 객체 생성 위치 2
+		// 각자 객체 생성 위치 3
+		// 각자 객체 생성 위치 4
 		Scanner sc = new Scanner(System.in);
 		int inputNum = 0;
 
