@@ -8,26 +8,32 @@ public class AirConditioner {
 	public void tempUp() {
 		if(temp >= 18 && temp < 30)
 			temp = temp + 1;
+		tempPrint();
 	}
 	public void tempDown() {
 		if(temp > 18 && temp <= 30)
 			temp = temp - 1;
+		tempPrint();
 	}
 	public void humUp() {
 		if(hum >= 30 && hum < 70)
 			hum = hum + 5;
+		humPrint();
 	}
 	public void humDown() {
 		if(hum > 30 && hum <= 70)
 			hum = hum - 5;
+		humPrint();
 	}
 	public void windUp() {
 		if(wind >= 1 && wind < 5)
 			this.wind = wind + 1;
+		windPrint();
 	}
 	public void windDown() {
 		if(wind > 1 && wind <= 5)
 			wind = wind - 1;
+		windPrint();
 	}
 	public void tempPrint() {
 		System.out.println("현재 목표 온도 : " + getTemp() + "℃");
@@ -38,7 +44,20 @@ public class AirConditioner {
 	public void windPrint() {
 		System.out.println("현재 목표 바람세기 : " + getWind() + "단계");
 	}
-	
+	public void funcPrint(int inputFuncNum) {
+		String arr[][] = {{"1. 온도 UP", "2. 온도 DOWN"},
+				{"1. 습도 UP", "2. 습도 DOWN"},
+				{"1. 바람세기 UP", "2. 바람세기 DOWN"}};
+		forPrint(arr, inputFuncNum);
+		System.out.println("3. 조작 종료");
+		System.out.print(">>> ");
+	}
+	public void forPrint(String arr[][], int inputFuncNum) {
+		for(int i = 0; i < 2; i++) {
+			System.out.println(arr[inputFuncNum-1][i]);
+		}
+	}
+
 	public int getTemp() {
 		return temp;
 	}
@@ -57,13 +76,13 @@ public class AirConditioner {
 	public void setWind(int wind) {
 		this.wind = wind;
 	}
-	
+
 	public void airConditionerFunc() {
 		Scanner sc = new Scanner(System.in);
 		String power;
 		int inputFuncNum = 0, inputTempNum = 0, inputHumNum = 0,
 				inputWindNum = 0;
-		
+
 		while(true) {
 			System.out.print("에어컨 on?(y/n): ");
 			power = sc.next();
@@ -83,21 +102,16 @@ public class AirConditioner {
 						System.out.println("=== 냉방 ===");
 						tempPrint();
 						while(inputTempNum != 3) {
-							System.out.println("1. 온도 UP");
-							System.out.println("2. 온도 DOWN");
-							System.out.println("3. 조작 종료");
-							System.out.print(">>> ");
+							funcPrint(inputFuncNum);
 							inputTempNum = sc.nextInt();
 							System.out.println();
-							
+
 							switch(inputTempNum) {
 							case 1 :
 								tempUp();
-								tempPrint();
 								break;
 							case 2 :
 								tempDown();
-								tempPrint();
 								break;
 							case 3 :
 								System.out.println("온도 조작 종료\n");
@@ -111,21 +125,16 @@ public class AirConditioner {
 						System.out.println("=== 제습 ===");
 						humPrint();
 						while(inputHumNum != 3) {
-							System.out.println("1. 습도 UP");
-							System.out.println("2. 습도 DOWN");
-							System.out.println("3. 조작 종료");
-							System.out.print(">>> ");
+							funcPrint(inputFuncNum);
 							inputHumNum = sc.nextInt();
 							System.out.println();
-							
+
 							switch(inputHumNum) {
 							case 1 :
 								humUp();
-								humPrint();
 								break;
 							case 2 :
 								humDown();
-								humPrint();
 								break;
 							case 3 :
 								System.out.println("습도 조작 종료\n");
@@ -139,21 +148,16 @@ public class AirConditioner {
 						System.out.println("=== 송풍 ===");
 						windPrint();
 						while(inputWindNum != 3) {
-							System.out.println("1. 송풍 UP");
-							System.out.println("2. 송풍 DOWN");
-							System.out.println("3. 조작 종료");
-							System.out.print(">>> ");
+							funcPrint(inputFuncNum);
 							inputWindNum = sc.nextInt();
 							System.out.println();
-							
+
 							switch(inputWindNum) {
 							case 1 :
 								windUp();
-								windPrint();
 								break;
 							case 2 :
 								windDown();
-								windPrint();
 								break;
 							case 3 :
 								System.out.println("송풍 조작 종료\n");

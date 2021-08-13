@@ -3,14 +3,13 @@ import java.util.Scanner;
 
 public class MainClass {
 
-   public static void main(String[] args) {
-      // 에어컨 객체 생성 위치
-      // 전화기 객체 생성 위치
-      // 라디오 객체 생성 위치
-      // 욕조 객체 생성 위치
-
-      Scanner sc = new Scanner(System.in);
-      int inputNum = 0;
+	public static void main(String[] args) {
+		// 각자 객체 생성 위치 1
+		// 각자 객체 생성 위치 2
+		// 각자 객체 생성 위치 3
+		// 각자 객체 생성 위치 4
+		Scanner sc = new Scanner(System.in);
+		int inputNum = 0;
 
       while(inputNum != 5) {
          System.out.println("==== 가전제품 ====");
@@ -23,6 +22,7 @@ public class MainClass {
          inputNum = sc.nextInt();
          System.out.println();
 
+<<<<<<< HEAD
          switch(inputNum) {
          case 1 :
             System.out.println("=== 에어컨 기능 ===");
@@ -48,4 +48,31 @@ public class MainClass {
          }
       }
    }
+=======
+			switch(inputNum) {
+			case 1 :
+				System.out.println("=== 에어컨 기능 ===");
+				// 에어컨 메소드 위치
+				break;
+			case 2 :
+				System.out.println("=== 전화기 기능 ===");
+				// 전화기 메소드 위치
+				break;
+			case 3 :
+				System.out.println("=== 라디오 기능 ===");
+				// 라디오 메소드 위치
+				break;
+			case 4 :
+				System.out.println("=== 욕조 기능 ===");
+				// 욕조 메소드 위치
+				break;
+			case 5 :
+				System.out.println("=== 프로그램 종료 ===");
+				break;
+			default :
+				System.out.println("다시 입력하세요\n");
+			}
+		}
+	}
+>>>>>>> 15026aae7d78fe2fa6752a1572df28b79fa76df7
 }
