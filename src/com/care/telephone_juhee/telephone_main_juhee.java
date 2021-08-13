@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class telephone_main_juhee {
 
-	public static void main(String[] args) {
+	public void telMain() {
 		Scanner scanner = new Scanner(System.in);
 		telephone_juhee tel = new telephone_juhee();
 		int select;
