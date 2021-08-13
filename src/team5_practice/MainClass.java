@@ -2,14 +2,15 @@ package team5_practice;
 import java.util.Scanner;
 
 import com.care.airconditioner_jeonwujin.AirConditioner;
-
+import com.care.bath_parkseungjae.*;
 public class MainClass {
 
 	public static void main(String[] args) {
 		AirConditioner ac = new AirConditioner();
 		// 각자 객체 생성 위치 2
 		// 각자 객체 생성 위치 3
-		// 각자 객체 생성 위치 4
+		Bath b = new Bath();
+
 		Scanner sc = new Scanner(System.in);
 		int inputNum = 0;
 
@@ -39,7 +40,7 @@ public class MainClass {
 				break;
 			case 4 :
 				System.out.println("=== 욕조 기능 ===");
-				// 욕조 메소드 위치
+				b.bath();
 				break;
 			case 5 :
 				System.out.println("=== 프로그램 종료 ===");
