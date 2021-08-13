@@ -1,15 +1,14 @@
 package team5_practice;
 import java.util.Scanner;
 
-import com.care.airconditioner_jeonwujin.AirConditioner;
-
 public class MainClass {
 
 	public static void main(String[] args) {
-		AirConditioner ac = new AirConditioner();
-		// 각자 객체 생성 위치 2
-		// 각자 객체 생성 위치 3
-		// 각자 객체 생성 위치 4
+		// 에어컨 객체 생성 위치
+		// 전화기 객체 생성 위치
+		// 라디오 객체 생성 위치
+		// 욕조 객체 생성 위치
+
 		Scanner sc = new Scanner(System.in);
 		int inputNum = 0;
 
@@ -27,7 +26,7 @@ public class MainClass {
 			switch(inputNum) {
 			case 1 :
 				System.out.println("=== 에어컨 기능 ===");
-				ac.airConditionerFunc();
+				// 에어컨 메소드 위치
 				break;
 			case 2 :
 				System.out.println("=== 전화기 기능 ===");
