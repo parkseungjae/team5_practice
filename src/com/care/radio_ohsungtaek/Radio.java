@@ -1,6 +1,6 @@
 package com.care.radio_ohsungtaek;
 
-public class radio {
+public class Radio {
 	private int channel = 10;
 	private int volume = 10;
 

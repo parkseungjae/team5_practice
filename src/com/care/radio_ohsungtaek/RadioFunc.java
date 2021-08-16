@@ -2,9 +2,9 @@ package com.care.radio_ohsungtaek;
 
 import java.util.Scanner;
 
-public class radioFunc {
-	public static void main(String[] args) {
-		radio rd = new radio();
+public class RadioFunc {
+	public void radioFunc() {
+		Radio rd = new Radio();
 		Scanner input = new Scanner(System.in);
 		
 		String power;
