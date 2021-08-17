@@ -1,13 +1,18 @@
 package team5_practice;
 import java.util.Scanner;
 
+import com.care.airconditioner_jeonwujin.AirConditioner;
+import com.care.bath_parkseungjae.Bath;
+import com.care.radio_ohsungtaek.RadioFunc;
+import com.care.telephone_juhee.telephone_main_juhee;
+
 public class MainClass {
 
 	public static void main(String[] args) {
-		// 각자 객체 생성 위치 1
-		// 각자 객체 생성 위치 2
-		// 각자 객체 생성 위치 3
-		// 각자 객체 생성 위치 4
+		AirConditioner ac = new AirConditioner();
+		telephone_main_juhee tel = new telephone_main_juhee();
+		Bath b = new Bath();
+		RadioFunc rf = new RadioFunc();
 		Scanner sc = new Scanner(System.in);
 		int inputNum = 0;
 
@@ -25,19 +30,19 @@ public class MainClass {
 			switch(inputNum) {
 			case 1 :
 				System.out.println("=== 에어컨 기능 ===");
-				// 에어컨 메소드 위치
+				ac.airConditionerFunc();
 				break;
 			case 2 :
 				System.out.println("=== 전화기 기능 ===");
-				// 전화기 메소드 위치
+				tel.telMain();
 				break;
 			case 3 :
 				System.out.println("=== 라디오 기능 ===");
-				// 라디오 메소드 위치
+				rf.radioFunc();
 				break;
 			case 4 :
 				System.out.println("=== 욕조 기능 ===");
-				// 욕조 메소드 위치
+				b.bath();
 				break;
 			case 5 :
 				System.out.println("=== 프로그램 종료 ===");
